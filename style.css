@@ -1,0 +1,22 @@
+.quizbody {
+    min-height: 100vh;
+    background-color: #007AFF !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.quizcard {
+    width: 500px;
+}
+
+.question-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question-footer button {
+    border-radius: 5px;
+    border: 1px solid #2288f5;
+    background-color: #2288f5;
+}
