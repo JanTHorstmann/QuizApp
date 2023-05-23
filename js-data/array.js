@@ -44,3 +44,5 @@ let questions = [
         "right_answer": "",
     },
 ];
+
+let currentquestion = 0;
