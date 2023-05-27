@@ -25,3 +25,24 @@
 cursor: pointer;
 background-color: rgb(214, 213, 213);
 }
+
+.bg_success {
+    color: white !important;
+    background-color: rgb(0, 163, 0) !important;
+}
+
+.bg_false {
+    color: white !important;
+    background-color: rgb(202, 0, 0) !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.progressbar {
+    display: flex;
+    justify-content: center;
+    padding-left: 10px;
+    background-color: #007AFF;
+}

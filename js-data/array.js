@@ -9,40 +9,14 @@ let questions = [
     },
 
     {
-        "question": "",
-        "answer_1": "",
-        "answer_2": "",
-        "answer_3": "",
-        "answer_4": "",
-        "right_answer": "",
-    },
-
-    {
-        "question": "",
-        "answer_1": "",
-        "answer_2": "",
-        "answer_3": "",
-        "answer_4": "",
-        "right_answer": "",
-    },
-
-    {
-        "question": "",
-        "answer_1": "",
-        "answer_2": "",
-        "answer_3": "",
-        "answer_4": "",
-        "right_answer": "",
-    },
-
-    {
-        "question": "",
-        "answer_1": "",
-        "answer_2": "",
-        "answer_3": "",
-        "answer_4": "",
-        "right_answer": "",
+        "question": "Was wird mit einem '<a>' Tag bestimmt",
+        "answer_1": "Text Fett",
+        "answer_2": "Link",
+        "answer_3": "Button",
+        "answer_4": "ffffff",
+        "right_answer": 2,
     },
 ];
 
+let rightQuestions = 0;
 let currentquestion = 0;
