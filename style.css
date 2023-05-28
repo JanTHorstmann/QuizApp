@@ -1,29 +1,136 @@
+body {
+    margin: 0;
+}
+
 .quizbody {
     min-height: 100vh;
-    background-color: #007AFF !important;
+    background-color: #dadada !important;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .quizcard {
+    border-radius: 10px;
+    background-color: white;
     width: 500px;
+}
+
+.quiz-selection {
+    background-color: rgb(39, 53, 92);
+    border-radius: 10px 0 0 10px;
+    width: 150px;
+    height: 400px;
+    color: white;
+}
+
+.question-selection{
+    display: flex;
+    gap: 20px;
+}
+
+.question-selection:hover {
+    cursor: pointer;
+    border-left: 3px solid white;
+}
+
+.question-count {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+    gap: 10px;
+}
+
+.quiz-logo {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.quiz-logo img {
+    width: 100px;
+}
+
+.selection {
+    height: 150px;
+    margin-bottom: 100px;
+}
+
+.question-body {
+    background-image: url(img/brainbg.jpg);
+    background-position: center;
+    background-size: contain;
+    border-radius: 0 10px 10px 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.question-body img {
+    width: 100px;
+}
+
+.startselection {
+    padding: 10px;
+}
+
+.question {
+    text-align: center;
+}
+
+.answer {
+    height: 70%;
+    align-items: center;
+}
+
+.answer span {
+    margin-left: 30px;
+    font-size: 20px;
+}
+
+.question-progress{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 30px 25px 0;
+}
+
+.answercard {
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.answer-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    background-color: gray;
 }
 
 .question-footer {
     display: flex;
     justify-content: space-between;
+    margin: 0 15px;
 }
 
 .question-footer button {
+    height: 25px;
+    width: 80px;
     border-radius: 5px;
     border: 1px solid #2288f5;
     background-color: #2288f5;
 }
 
 .answercard:hover {
-cursor: pointer;
-background-color: rgb(214, 213, 213);
+    cursor: pointer;
+    background-color: rgb(214, 213, 213);
 }
 
 .bg_success {
@@ -36,13 +143,41 @@ background-color: rgb(214, 213, 213);
     background-color: rgb(202, 0, 0) !important;
 }
 
+.progressbar {
+    display: flex;
+    justify-content: center;
+    color: white;
+    padding-left: 10px;
+    background-color: rgb(39, 53, 92);
+}
+
+/*general class*/
 .text-center {
     text-align: center;
 }
 
-.progressbar {
+.font-size-20-bold {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.display-row {
     display: flex;
-    justify-content: center;
-    padding-left: 10px;
-    background-color: #007AFF;
+    justify-content: space-between;
+}
+
+.display-between-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-column-between {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.border-left-3 {
+    border-left: 3px solid white;
 }

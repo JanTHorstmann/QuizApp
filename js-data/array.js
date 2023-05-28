@@ -1,6 +1,6 @@
-let questions = [
+let htmlQuestions = [
     {
-        "question": "Wer hat HTML erfunden",
+        "question": "Wer hat HTML erfunden?",
         "answer_1": "Robbie Williams",
         "answer_2": "Lady Gaga",
         "answer_3": "Tim Berners-Lee",
@@ -9,7 +9,7 @@ let questions = [
     },
 
     {
-        "question": "Was wird mit einem '<a>' Tag bestimmt",
+        "question": "Was wird mit einem  Tag bestimmt?",
         "answer_1": "Text Fett",
         "answer_2": "Link",
         "answer_3": "Button",
@@ -18,5 +18,8 @@ let questions = [
     },
 ];
 
-let rightQuestions = 0;
+let rightHTMLQuestions = 0;
+let rightCSSQuestions = 0;
+let rightJSQuestions = 0;
+let rightJavaQuestions = 0;
 let currentquestion = 0;
