@@ -1,30 +1,37 @@
 function showQuestion(questionSelection) {
     let questioncard = document.getElementById('currentquestion');
+    removeCssClass();
 
-    if (questionSelection == 'htmlQuestions' || htmlQuestions ) {
-        htmlQuestion(questioncard);
-    }
     if (questionSelection == 'start') {
         questioncard.innerHTML = renderStartscreen();
+    } else {
+        //answerd();
+        questions(questionSelection);
     }
+    countQuestion();
 };
 
-function htmlQuestion(questioncard) {
-    let question = htmlQuestions[currentquestion]
-    document.getElementById('hoverhtml').classList.add('border-left-3');
-    document.getElementById('hovercss').classList.remove('border-left-3');
-    document.getElementById('hoverjs').classList.remove('border-left-3');
-    document.getElementById('hoverjava').classList.remove('border-left-3');
-    if (currentquestion < htmlQuestions.length) {
 
-        let percent = Math.round((currentquestion + 1) / htmlQuestions.length * 100);
-        questioncard.innerHTML = renderQuestion(question, 'rightHTMLQuestions', 'htmlQuestions');
-        countQuestion(htmlQuestions, percent);
-    } else {
-        // Endscreen
-        questioncard.innerHTML = renderEndscreen();
-    }
+function questions(questionSelection) {
+    let questioncard = document.getElementById('currentquestion');
+    if (questionSelection == 'htmlQuestions' || questionSelection == htmlQuestions) {
 
+        htmlQuestion(questioncard);
+
+    };
+    if (questionSelection == 'cssQuestions' || questionSelection == cssQuestions) {
+
+        cssQuestion(questioncard);
+    };
+    if (questionSelection == 'jsQuestions' || questionSelection == jsQuestions) {
+
+        jsQuestion(questioncard);
+    };
+    if (questionSelection == 'javaQuestions' || questionSelection == javaQuestions) {
+
+        javaQuestion(questioncard);
+    };
+    countQuestion();
 }
 
 
@@ -38,7 +45,7 @@ function answer(questions, answer) {
         if (questions == htmlQuestions) {
             rightHTMLQuestions++
         };
-        /*if (questions == cssQuestions) {
+        if (questions == cssQuestions) {
             rightCSSQuestions++
         };
         if (questions == jsQuestions) {
@@ -46,7 +53,7 @@ function answer(questions, answer) {
         };
         if (questions == javaQuestions) {
             rightJavaQuestions++
-        };*/
+        };
     } else {
         bganswer.classList.add('bg_false');
         document.getElementById(idOfRightanswer).classList.add('bg_success');
@@ -56,23 +63,47 @@ function answer(questions, answer) {
 }
 
 
-function nextQuestion(count, questionSelection) {
-    count++
+function nextQuestion(questionSelection) {
     currentquestion++;
-    showQuestion(questionSelection);
+    questions(questionSelection);
 }
 
+function backQuestion(questionSelection) {
+    currentquestion--;
+    questions(questionSelection);
+}
 
 function restartGame() {
-    rightQuestions = 0;
+    rightHTMLQuestions = 0;
+    rightCSSQuestions = 0;
+    rightJSQuestions = 0;
+    rightJavaQuestions = 0;
     currentquestion = 0;
-    showQuestion();
+    questionfinish.splice(0, 4)
+    showQuestion('start');
 }
 
 
 function countQuestion(question, percent) {
-    document.getElementById('question-count').innerHTML = `<b>${currentquestion + 1}</b> von <b>${question.length}</b>`;
+    let rightquestions = countAllQuestions('rightanswer');
+    let allquestions = countAllQuestions()
+    document.getElementById('question-count').innerHTML = `<b>${rightquestions}</b> von <b>${allquestions}</b>`;
     document.getElementById('progressbar').innerHTML = `<div class="progressbar" style="width: ${percent}%;">${percent}%</div>`;
 }
 
+function removeCssClass() {
+    document.getElementById('hoverhtml').classList.remove('border-left-3');
+    document.getElementById('hovercss').classList.remove('border-left-3');
+    document.getElementById('hoverjs').classList.remove('border-left-3');
+    document.getElementById('hoverjava').classList.remove('border-left-3');
+}
 
+
+function countAllQuestions(questions) {
+
+    if (questions == 'rightanswer') {
+        return rightanswer = rightHTMLQuestions + rightCSSQuestions + rightJSQuestions + rightJavaQuestions;
+    } else {
+        return allquestions = htmlQuestions.length + cssQuestions.length + jsQuestions.length + javaQuestions.length;
+    }
+}

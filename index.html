@@ -9,6 +9,7 @@
     <script src="js-data/array.js"></script>
     <script src="js-data/script.js"></script>
     <script src="js-data/render.js"></script>
+    <script src="js-data/questionsfunction.js"></script>
 
 
     <title>Document</title>
@@ -27,21 +28,29 @@
                     <div class="selection flex-column-between">
 
                         <div class="question-selection">
-                            <div></div>
-                            <div id="hoverhtml" class="font-size-20-bold" onclick="showQuestion('htmlQuestions')">HTML
+                            <div id="hoverstart"></div>
+                            <div class="font-size-20-bold" onclick="showQuestion('start')">Startseite
                             </div>
                         </div>
-                        <div class="question-selection">
-                            <div></div>
-                            <div id="hovercss" class="font-size-20-bold">CSS</div>
+
+
+
+                        <div class="question-selection"  onclick="showQuestion('htmlQuestions')">
+                            <div id="hoverhtml"></div>
+                            <div class="font-size-20-bold">HTML
+                            </div>
                         </div>
-                        <div class="question-selection">
-                            <div></div>
-                            <div id="hoverjs" class="font-size-20-bold">JS</div>
+                        <div class="question-selection" onclick="showQuestion('cssQuestions')">
+                            <div id="hovercss"></div>
+                            <div class="font-size-20-bold">CSS</div>
                         </div>
-                        <div class="question-selection">
-                            <div></div>
-                            <div id="hoverjava" class="font-size-20-bold">Java</div>
+                        <div class="question-selection" onclick="showQuestion('jsQuestions')">
+                            <div id="hoverjs"></div>
+                            <div class="font-size-20-bold">JS</div>
+                        </div>
+                        <div class="question-selection" onclick="showQuestion('javaQuestions')">
+                            <div id="hoverjava"></div>
+                            <div class="font-size-20-bold">Java</div>
                         </div>
                     </div>
                     <div id="question-count" class="question-count"></div>

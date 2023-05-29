@@ -80,6 +80,7 @@ body {
 .answer {
     height: 70%;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 .answer span {
