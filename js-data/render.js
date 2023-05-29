@@ -1,4 +1,4 @@
-function renderQuestion(question, array) {
+function renderQuestion(question, array, rightquestion, selection) {
     return `<h2 class="question">${question['question']}</h2>
             <div class="answer flex-column-between">
                 <div id="answer_1" class="answercard" onclick="answer(${array}, 'answer_1')">
@@ -15,7 +15,8 @@ function renderQuestion(question, array) {
                 </div>
             </div>
             <div class="question-footer">
-                <button id="back-button" disabled onclick="backQuestion(${array})">Back</button>
+                <button id="back-button" onclick="backQuestion(${array})">Back</button>
+                <p>${rightquestion} / ${selection.length}</p>
                 <button id="next-button" disabled onclick="nextQuestion(${array})">Next</button>
             </div>`
 }
@@ -39,19 +40,27 @@ function renderStartscreen() {
                 <div id="answer_4" class="question-progress">
                     <span>Java</span><span>${rightJavaQuestions} / ${javaQuestions.length}</span>
                 </div>
+            </div>
+            <div class="padding-10 display-right-center">
+                <button class="button-replay" onclick="restartGame()">Replay</button>
             </div>`
 }
 
 
-function renderEndscreen(questions, rightQuestions) {
-    return `
-    <div class="card-body text-center">
-        <h1>Quiz beedenet!</h1>
+function renderEndscreen(questions, rightQuestions, selection, quizname) {
+    return ` <div class="finished-question">
+    <div class="card-body text-center padding-10">
+        <img src="img/brain result.png" alt="">
+        <h3>Complete</h3>
+        <h3>${quizname} Quiz</h3>
     </div>
-    <img src="img/cup.png" class="card-img-top text-center">
-    <div>
-        Du hast <b>${rightQuestions}</b> von <b>${questions.length}</b> richtig beantwortet</div>
+    
+    <div class="display-center-gap20">
+        <h3>Your Score</h3><h3><b>${rightQuestions}</b>/<b>${questions.length}</b></p></h3>
     </div>
-    <button onclick="restartGame()">Nochmal Versuchen</button>
-    `
+    <div class="padding-10 display-center-center-column">
+    <button class="button-start" onclick="showQuestion('start')">Start</button>
+    <button class="button-replay" onclick="deleteQuestionSelection(${selection})">Replay</button>
+    </div>
+    </div>`
 }

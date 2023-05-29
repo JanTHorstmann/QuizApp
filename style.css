@@ -1,3 +1,8 @@
+h3 {
+    margin: 5px 0;
+    font-size: 21px;
+}
+
 body {
     margin: 0;
 }
@@ -13,18 +18,18 @@ body {
 .quizcard {
     border-radius: 10px;
     background-color: white;
-    width: 500px;
+    width: 600px;
 }
 
 .quiz-selection {
     background-color: rgb(39, 53, 92);
     border-radius: 10px 0 0 10px;
     width: 150px;
-    height: 400px;
+    height: 450px;
     color: white;
 }
 
-.question-selection{
+.question-selection {
     display: flex;
     gap: 20px;
 }
@@ -54,14 +59,15 @@ body {
 .selection {
     height: 150px;
     margin-bottom: 100px;
+    gap: 20px;
 }
 
 .question-body {
+    background-color: white;
     background-image: url(img/brainbg.jpg);
     background-position: center;
     background-size: contain;
     border-radius: 0 10px 10px 0;
-    padding: 10px;
     width: 100%;
 }
 
@@ -75,10 +81,11 @@ body {
 
 .question {
     text-align: center;
+    padding: 0 10px;
 }
 
 .answer {
-    height: 70%;
+    height: 220px;
     align-items: center;
     padding-bottom: 10px;
 }
@@ -88,7 +95,7 @@ body {
     font-size: 20px;
 }
 
-.question-progress{
+.question-progress {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -152,6 +159,48 @@ body {
     background-color: rgb(39, 53, 92);
 }
 
+.finished-question {
+    border-radius: 0 10px 10px 0;
+    padding: 10px 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    background-image: url(img/tropy.png);
+    background-repeat: no-repeat;
+    background-size: 100px;
+    background-position-x: right;
+    background-position-y: 150px;
+}
+
+button {
+    cursor: pointer;
+    margin: 5px 0;
+    border-radius: 8px;
+    border: none;
+    width: 170px;
+    height: 40px;
+    font-size: 20px;
+}
+
+.button-start {
+    background-color: rgb(24, 60, 232);
+    color: white;
+}
+
+.button-start:hover {
+    background-color: rgba(24, 60, 232,0.8);
+}
+
+.button-replay {
+    color: rgb(24, 60, 232);
+}
+
+.button-replay:hover {
+    background-color: rgba(24, 60, 232,0.2);
+}
+
 /*general class*/
 .text-center {
     text-align: center;
@@ -181,4 +230,30 @@ body {
 
 .border-left-3 {
     border-left: 3px solid white;
+}
+
+.display-center-gap20 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.font-color-orange {
+    color: orange;
+}
+
+.display-center-center-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.display-right-center{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.padding-10 {
+    padding: 10px;
 }
