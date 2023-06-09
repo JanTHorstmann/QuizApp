@@ -18,14 +18,14 @@ body {
 .quizcard {
     border-radius: 10px;
     background-color: white;
-    width: 600px;
+    width: 700px;
 }
 
 .quiz-selection {
     background-color: rgb(39, 53, 92);
-    border-radius: 10px 0 0 10px;
-    width: 150px;
-    height: 450px;
+    border-radius: 0px 0 0 10px;
+    width: 170px;
+    height: 50vh;
     color: white;
 }
 
@@ -41,6 +41,7 @@ body {
 
 .question-count {
     display: flex;
+    justify-content: center;
     align-items: center;
     margin: 10px 20px;
     gap: 10px;
@@ -58,6 +59,7 @@ body {
 
 .selection {
     height: 150px;
+    margin-right: 10px;
     margin-bottom: 100px;
     gap: 20px;
 }
@@ -66,9 +68,11 @@ body {
     background-color: white;
     background-image: url(img/brainbg.jpg);
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     border-radius: 0 10px 10px 0;
     width: 100%;
+    height: 50vh;
+    padding-left: 10px;
 }
 
 .question-body img {
@@ -76,7 +80,7 @@ body {
 }
 
 .startselection {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .question {
@@ -85,13 +89,12 @@ body {
 }
 
 .answer {
-    height: 220px;
+    height: 60%;
     align-items: center;
-    padding-bottom: 10px;
 }
 
 .answer span {
-    margin-left: 30px;
+    margin-left: 5px;
     font-size: 20px;
 }
 
@@ -104,7 +107,8 @@ body {
 
 .answercard {
     width: 90%;
-    height: 50px;
+    height: 70px;
+    margin: 5px 0;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -117,7 +121,7 @@ body {
     justify-content: center;
     margin: 10px;
     font-size: 25px;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     background-color: gray;
 }
@@ -125,15 +129,20 @@ body {
 .question-footer {
     display: flex;
     justify-content: space-between;
-    margin: 0 15px;
+    margin: 10px 15px;
 }
 
-.question-footer button {
-    height: 25px;
-    width: 80px;
-    border-radius: 5px;
-    border: 1px solid #2288f5;
-    background-color: #2288f5;
+.question-footer img {
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    padding: 4px;
+    border-radius: 100%;
+    background-color: rgb(214, 213, 213)
+}
+
+.question-footer img:hover {
+    background-color: rgba(214, 213, 213, 0.5)
 }
 
 .answercard:hover {
@@ -152,11 +161,16 @@ body {
 }
 
 .progressbar {
+    border-radius: 10px 10px 0 0;
     display: flex;
     justify-content: center;
     color: white;
-    padding-left: 10px;
+    text-align: left;
     background-color: rgb(39, 53, 92);
+}
+
+.progress {
+    width: 100%;
 }
 
 .finished-question {
@@ -176,7 +190,7 @@ body {
 
 button {
     cursor: pointer;
-    margin: 5px 0;
+    margin: 10px 10px;
     border-radius: 8px;
     border: none;
     width: 170px;
@@ -184,13 +198,13 @@ button {
     font-size: 20px;
 }
 
-.button-start {
+.button-startscreen {
     background-color: rgb(24, 60, 232);
     color: white;
 }
 
-.button-start:hover {
-    background-color: rgba(24, 60, 232,0.8);
+.button-startscreen:hover {
+    background-color: rgba(24, 60, 232, 0.8);
 }
 
 .button-replay {
@@ -198,7 +212,28 @@ button {
 }
 
 .button-replay:hover {
-    background-color: rgba(24, 60, 232,0.2);
+    background-color: rgba(24, 60, 232, 0.2);
+}
+
+.button-startchallenge {
+    
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 35px;
+    background-color: rgb(255, 78, 14);
+    color: white;
+}
+
+.button-startchallenge img {
+    height: 25px;
+    width: 25px;
+    filter: invert(1);
+}
+
+.button-startchallenge:hover {
+    background-color: rgba(255, 78, 14, 0.8);
 }
 
 /*general class*/
@@ -206,8 +241,7 @@ button {
     text-align: center;
 }
 
-.font-size-20-bold {
-    font-weight: bold;
+.font-size-20 {
     font-size: 20px;
 }
 
@@ -248,7 +282,14 @@ button {
     align-items: center;
 }
 
-.display-right-center{
+.display-column-center-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-right-center {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -256,4 +297,54 @@ button {
 
 .padding-10 {
     padding: 10px;
+}
+
+.font-rubik {
+    font-family: 'Rubik';
+}
+
+.font-pt-sans {
+    font-family: 'PT Sans' !important;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+.margin-0 h2{
+    margin: 0;
+}
+
+@media(max-width: 600px) {
+    .quizcard {
+        margin: 2px;
+        height: 80vh;
+        width: 100%;
+    }
+
+    .display-row {
+        height: 100%;
+    }
+
+    .quiz-selection {
+        height: 100%;
+    }
+
+    .startselection {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .question-body {
+        height: 100%;
+        background-repeat: no-repeat;
+    }
+
+    .selection {
+        margin-right: 0px;
+    }
+
+    .question-selection {
+        gap: 10px;
+    }
 }

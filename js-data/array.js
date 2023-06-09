@@ -109,10 +109,13 @@ let javaQuestions = [
         "right_answer": 2,
     },
 ];
-let rightHTMLQuestions = 0;
-let rightCSSQuestions = 0;
-let rightJSQuestions = 0;
-let rightJavaQuestions = 0;
+let HTML = [];
+let CSS = [];
+let JavaScript = [];
+let Java = [];
 let currentquestion = 0;
 
-let questionfinish = ['html'];
+let questionfinish = [];
+
+let audio_success = new Audio('audio/success.mp3')
+let audio_fail = new Audio('audio/fail.mp3')

@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <script src="js-data/array.js"></script>
-    <script src="js-data/script.js"></script>
+    <script src="js-data/script2.js"></script>
     <script src="js-data/render.js"></script>
     <script src="js-data/questionsfunction.js"></script>
 
@@ -15,54 +16,58 @@
     <title>Document</title>
 </head>
 
-<body onload="showQuestion('start')">
-    <div id="progressbar"></div>
+<body onload="showStartscreen('start')">
+
     <div class="quizbody">
         <div class="quizcard">
-
+            <div id="progressbar"></div>
             <div class="display-row">
-                <div class="quiz-selection flex-column-between">
+                <div class="quiz-selection font-rubik flex-column-between">
                     <div class="quiz-logo">
                         <img src="img/logo.png" class="card-img-top">
                     </div>
                     <div class="selection flex-column-between">
-
                         <div class="question-selection">
                             <div id="hoverstart"></div>
-                            <div class="font-size-20-bold" onclick="showQuestion('start')">Startseite
+                            <div class="font-size-20" onclick="showStartscreen('start')">Start
                             </div>
                         </div>
-
-
-
-                        <div class="question-selection"  onclick="showQuestion('htmlQuestions', 'rightHTMLQuestions')">
-                            <div id="hoverhtml"></div>
-                            <div class="font-size-20-bold">HTML
+                        <div class="question-selection" onclick="startQuiz('HTML', 'htmlQuestions', htmlQuestions, HTML)">
+                            <div id="hoverHTML"></div>
+                            <div class="font-size-20">HTML
                             </div>
                         </div>
-                        <div class="question-selection" onclick="showQuestion('cssQuestions', 'rightCSSQuestions')">
-                            <div id="hovercss"></div>
-                            <div class="font-size-20-bold">CSS</div>
+                        <div class="question-selection" onclick="startQuiz('CSS', 'cssQuestions', cssQuestions, CSS)">
+                            <div id="hoverCSS"></div>
+                            <div class="font-size-20">CSS</div>
                         </div>
-                        <div class="question-selection" onclick="showQuestion('jsQuestions', 'rightJSQuestions')">
-                            <div id="hoverjs"></div>
-                            <div class="font-size-20-bold">JS</div>
+                        <div class="question-selection" onclick="startQuiz('JavaScript', 'jsQuestions', jsQuestions, JavaScript)">
+                            <div id="hoverJavaScript"></div>
+                            <div class="font-size-20">JS</div>
                         </div>
-                        <div class="question-selection" onclick="showQuestion('javaQuestions', 'rightJavaQuestions')">
-                            <div id="hoverjava"></div>
-                            <div class="font-size-20-bold">Java</div>
+                        <div class="question-selection" onclick="startQuiz('Java', 'javaQuestions', javaQuestions, Java)">
+                            <div id="hoverJava"></div>
+                            <div class="font-size-20">Java</div>
                         </div>
                     </div>
                     <div id="question-count" class="question-count"></div>
                 </div>
+                <div id="currentquestion" class="question-body font-rubik flex-column-between">
 
-                <div id="currentquestion" class="question-body flex-column-between">
+
                     
+                    
+
+
+
+
+
+
+
                 </div>
             </div>
         </div>
     </div>
-
 
 
 </body>
