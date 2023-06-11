@@ -17,7 +17,7 @@ function renderQuestion(questionarray, array, id, countid) {
                 </div>
             </div>
             <div class="question-footer">
-                    <img src="img/arrowreturn.png">
+                    <img src="img/arrowreturn.png" onclick="returnAnswer(${array}, '${array}', '${id}', ${id})">
                 <p>${countid.length+1} / ${questionarray.length}</p>
                     <img src="img/arrownext.png" id="next-button" disabled onclick="questions(${array}, '${array}', '${id}', ${id})">
             </div>`

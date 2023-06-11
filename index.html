@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
     <script src="js-data/array.js"></script>
-    <script src="js-data/script2.js"></script>
+    <script src="js-data/script.js"></script>
     <script src="js-data/render.js"></script>
     <script src="js-data/questionsfunction.js"></script>
 
@@ -22,14 +22,15 @@
         <div class="quizcard">
             <div id="progressbar"></div>
             <div class="display-row">
-                <div class="quiz-selection font-rubik flex-column-between">
-                    <div class="quiz-logo">
+                <img class="menu" src="img/menu.png" alt="" onclick="showResponsiveMenu()">
+                <div id="quiz-selection" class="quiz-selection font-rubik flex-column-between">
+                    <div class="quiz-logo" onclick="hideResponsiveMenu()">
                         <img src="img/logo.png" class="card-img-top">
                     </div>
                     <div class="selection flex-column-between">
                         <div class="question-selection">
                             <div id="hoverstart"></div>
-                            <div class="font-size-20" onclick="showStartscreen('start')">Start
+                            <div class="font-size-20" onclick="showStartscreen('start')">Startseite
                             </div>
                         </div>
                         <div class="question-selection" onclick="startQuiz('HTML', 'htmlQuestions', htmlQuestions, HTML)">
